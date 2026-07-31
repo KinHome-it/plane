@@ -5,6 +5,7 @@
     "dockerfilePath": "apps/web/Dockerfile.web"
   },
   "deploy": {
+    "startCommand": "serve -s build/client -l $PORT",
     "healthcheckPath": "/",
     "healthcheckTimeout": 60,
     "restartPolicyType": "ON_FAILURE",

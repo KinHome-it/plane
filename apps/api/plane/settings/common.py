@@ -377,6 +377,7 @@ SESSION_ENGINE = "plane.db.models.session"
 SESSION_COOKIE_AGE = int(os.environ.get("SESSION_COOKIE_AGE", 604800))
 SESSION_COOKIE_NAME = os.environ.get("SESSION_COOKIE_NAME", "session-id")
 SESSION_COOKIE_DOMAIN = os.environ.get("COOKIE_DOMAIN", None)
+SESSION_COOKIE_SAMESITE = os.environ.get("SESSION_COOKIE_SAMESITE", "None")
 SESSION_SAVE_EVERY_REQUEST = os.environ.get("SESSION_SAVE_EVERY_REQUEST", "0") == "1"
 
 # Admin Cookie
@@ -388,6 +389,7 @@ CSRF_COOKIE_SECURE = secure_origins
 CSRF_COOKIE_HTTPONLY = True
 CSRF_TRUSTED_ORIGINS = cors_allowed_origins
 CSRF_COOKIE_DOMAIN = os.environ.get("COOKIE_DOMAIN", None)
+CSRF_COOKIE_SAMESITE = os.environ.get("CSRF_COOKIE_SAMESITE", "None")
 CSRF_FAILURE_VIEW = "plane.authentication.views.common.csrf_failure"
 
 ######  Base URLs ######
