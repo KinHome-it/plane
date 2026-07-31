@@ -5,7 +5,6 @@
     "dockerfilePath": "apps/admin/Dockerfile.admin"
   },
   "deploy": {
-    "startCommand": "serve -s build/client -l $PORT",
     "healthcheckPath": "/",
     "healthcheckTimeout": 60,
     "restartPolicyType": "ON_FAILURE",
