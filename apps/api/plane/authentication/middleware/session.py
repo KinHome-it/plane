@@ -48,7 +48,7 @@ class SessionMiddleware(MiddlewareMixin):
                 cookie_name,
                 path=settings.SESSION_COOKIE_PATH,
                 domain=settings.SESSION_COOKIE_DOMAIN,
-                samesite=settings.SESSION_COOKIE_SAMESITE,
+                samesite="None",
             )
             patch_vary_headers(response, ("Cookie",))
         else:
@@ -87,6 +87,6 @@ class SessionMiddleware(MiddlewareMixin):
                         path=settings.SESSION_COOKIE_PATH,
                         secure=settings.SESSION_COOKIE_SECURE or None,
                         httponly=settings.SESSION_COOKIE_HTTPONLY or None,
-                        samesite=settings.SESSION_COOKIE_SAMESITE,
+                        samesite="None",
                     )
         return response
