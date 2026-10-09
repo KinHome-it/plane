@@ -5,7 +5,6 @@
     "dockerfilePath": "apps/live/Dockerfile.live"
   },
   "deploy": {
-    "startCommand": "node --env-file=.env .",
     "healthcheckPath": "/",
     "healthcheckTimeout": 60,
     "restartPolicyType": "ON_FAILURE",

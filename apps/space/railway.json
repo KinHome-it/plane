@@ -5,8 +5,7 @@
     "dockerfilePath": "apps/space/Dockerfile.space"
   },
   "deploy": {
-    "startCommand": "PORT=$PORT react-router-serve ./build/server/index.js",
-    "healthcheckPath": "/",
+    "healthcheckPath": "/spaces/",
     "healthcheckTimeout": 60,
     "restartPolicyType": "ON_FAILURE",
     "restartPolicyMaxRetries": 5
